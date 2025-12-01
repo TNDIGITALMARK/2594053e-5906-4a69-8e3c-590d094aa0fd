@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "Love and Mystery by Nicole Clark - Romance & Mystery Novels",
+  description: "Discover Nicole Clark's captivating collection of romantic mystery novels. Where love and intrigue intertwine in unforgettable stories.",
 };
 
 export default function RootLayout({

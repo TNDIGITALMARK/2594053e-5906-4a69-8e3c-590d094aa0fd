@@ -1,59 +1,71 @@
 @import "tailwindcss";
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Import elegant fonts for Nicole Clark's romantic mystery brand */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================
+   NICOLE CLARK AUTHOR PLATFORM DESIGN SYSTEM
+   Purple-Pink Romantic Mystery Theme
+   ============================================ */
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* Purple-Pink Gradient Background (from design reference) */
+  --background: 300 35% 82%; /* #C8A2D0 light purple */
+  --foreground: 0 0% 18%; /* #2D2D2D dark charcoal */
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* Light pink card backgrounds */
+  --card: 300 40% 95%; /* #F5E6F0 very light pink/lavender */
+  --card-foreground: 0 0% 18%;
 
-  /* Popovers with white background */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  /* Popovers match card style */
+  --popover: 300 40% 95%;
+  --popover-foreground: 0 0% 18%;
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
+  /* Primary: Deep purple (from design reference) */
+  --primary: 300 25% 42%; /* #6B4068 dark purple */
   --primary-foreground: 0 0% 100%;
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Secondary: Soft pink accent */
+  --secondary: 330 50% 85%; /* #E8B4D0 soft pink */
+  --secondary-foreground: 0 0% 18%;
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Muted: Light lavender */
+  --muted: 300 30% 90%;
+  --muted-foreground: 300 10% 45%;
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
+  /* Accent: Romantic pink */
+  --accent: 330 50% 85%; /* #E8B4D0 */
+  --accent-foreground: 0 0% 18%;
 
-  /* Destructive: Clean red */
+  /* Destructive: Keep red for errors */
   --destructive: 0 70% 50%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  /* Borders: Subtle purple-tinted */
+  --border: 300 20% 85%;
+  --input: 300 20% 90%;
+  --ring: 300 25% 42%;
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Rounded corners for elegant feel */
+  --radius: 0.5rem;
 
-  /* Sidebar: Clean white with black text */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
+  /* Sidebar: Match theme */
+  --sidebar-background: 300 40% 95%;
+  --sidebar-foreground: 0 0% 18%;
+  --sidebar-primary: 300 25% 42%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
+  --sidebar-accent: 330 50% 85%;
+  --sidebar-accent-foreground: 0 0% 18%;
+  --sidebar-border: 300 20% 85%;
+  --sidebar-ring: 300 25% 42%;
+
+  /* Custom gradient variables for Nicole Clark brand */
+  --gradient-purple-pink: linear-gradient(135deg, hsl(300, 35%, 82%) 0%, hsl(330, 50%, 85%) 100%);
+  --gradient-dark-purple: linear-gradient(180deg, hsl(300, 25%, 42%) 0%, hsl(300, 30%, 35%) 100%);
 }
 
 .dark {
@@ -168,36 +180,139 @@ All colors MUST be HSL.
   border-color: hsl(var(--border));
 }
 
+/* ============================================
+   TYPOGRAPHY SYSTEM
+   ============================================ */
+
+html {
+  font-size: 16px;
+}
+
 body {
-  background-color: hsl(var(--background));
+  background: var(--gradient-purple-pink);
   color: hsl(var(--foreground));
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
   font-feature-settings: "rlig" 1, "calt" 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
-/* Minimal, clean typography */
+/* Elegant typography hierarchy matching design reference */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
   font-weight: 600;
-  letter-spacing: -0.025em;
+  line-height: 1.2;
   color: hsl(var(--foreground));
+  margin-bottom: 0.75em;
 }
 
-/* Clean button styles */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h5, h6 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+
+a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: hsl(var(--secondary));
+}
+
+/* Button styles matching design reference */
 button {
+  font-family: 'Inter', sans-serif;
   font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: all 0.3s ease;
 }
 
-/* Subtle shadows for depth */
+/* Elegant shadows for floating card effect */
 .shadow-sm {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  box-shadow: 0 2px 4px 0 rgb(107 64 104 / 0.08);
 }
 
 .shadow {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 8px 0 rgb(107 64 104 / 0.12), 0 2px 4px -1px rgb(107 64 104 / 0.08);
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow: 0 8px 16px 0 rgb(107 64 104 / 0.15), 0 4px 8px -2px rgb(107 64 104 / 0.1);
+}
+
+.shadow-lg {
+  box-shadow: 0 16px 32px 0 rgb(107 64 104 / 0.18), 0 8px 16px -4px rgb(107 64 104 / 0.12);
+}
+
+/* Book cover styling matching design reference */
+.book-cover {
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgb(107 64 104 / 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-cover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px 0 rgb(107 64 104 / 0.25);
+}
+
+/* Gradient button styles from design */
+.btn-gradient {
+  background: linear-gradient(135deg, hsl(300, 25%, 42%) 0%, hsl(330, 50%, 70%) 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, hsl(300, 25%, 38%) 0%, hsl(330, 50%, 65%) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px 0 rgb(107 64 104 / 0.25);
+}
+
+/* Sparkle effect matching book covers */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
 }
