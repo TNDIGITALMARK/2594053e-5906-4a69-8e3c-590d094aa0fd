@@ -45,7 +45,7 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section - Modern Design with Background */}
-      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
+      <section className="relative min-h-[calc(100vh-4rem)] overflow-hidden flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -57,7 +57,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-6 relative z-10 py-12 md:py-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             {/* Left Content */}
             <div className="text-center space-y-8">
