@@ -5,16 +5,16 @@ import { Mail } from "lucide-react";
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
+      {/* Navigation - Compact Header */}
       <nav className="bg-card/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-2">
+        <div className="container mx-auto px-6 py-1.5">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
-              <h1 className="text-xl md:text-2xl text-primary hover:text-secondary transition-colors">
+              <h1 className="text-lg md:text-xl text-primary hover:text-secondary transition-colors">
                 Love and Mystery by Nicole Clark
               </h1>
             </Link>
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               <Link
                 href="/"
                 className="text-sm font-medium text-foreground hover:text-secondary transition-colors uppercase tracking-wider"
@@ -44,9 +44,20 @@ export default function HomePage() {
         </div>
       </nav>
 
-      {/* Hero Section - Modern Design */}
+      {/* Hero Section - Modern Design with Background */}
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden">
-        <div className="container mx-auto px-6">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/generated/hero-background.png"
+            alt=""
+            fill
+            className="object-cover opacity-40"
+            priority
+          />
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             {/* Left Content */}
             <div className="text-center lg:text-left space-y-8">
@@ -144,8 +155,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Decorative gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/30 pointer-events-none"></div>
+        {/* Decorative gradient overlay for smooth transition */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/50 pointer-events-none z-[5]"></div>
       </section>
 
       {/* Latest Release Section */}
