@@ -7,10 +7,10 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Navigation */}
       <nav className="bg-card/80 backdrop-blur-sm shadow-sm sticky top-0 z-50">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-2">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center">
-              <h1 className="text-2xl md:text-3xl text-primary hover:text-secondary transition-colors">
+              <h1 className="text-xl md:text-2xl text-primary hover:text-secondary transition-colors">
                 Love and Mystery by Nicole Clark
               </h1>
             </Link>
@@ -112,7 +112,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
               <div className="relative aspect-[2/3] book-cover overflow-hidden max-w-sm mx-auto">
                 <Image
-                  src="/generated/crimson-secrets.png"
+                  src="/generated/crimson-secrets-hero.png"
                   alt="Crimson Secrets - Latest Release"
                   fill
                   className="object-cover"
@@ -155,6 +155,102 @@ export default function HomePage() {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Writing Themes Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl text-center mb-12">The Heart of Every Story</h2>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-card rounded-xl shadow-md p-8 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl mb-4">Passionate Romance</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Love stories that sweep you off your feet, with deeply emotional connections and
+                characters who will capture your heart.
+              </p>
+            </div>
+            <div className="bg-card rounded-xl shadow-md p-8 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl mb-4">Gripping Mystery</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Secrets that unravel with every turn of the page, keeping you guessing until
+                the final reveal in each suspenseful tale.
+              </p>
+            </div>
+            <div className="bg-card rounded-xl shadow-md p-8 text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-6 flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <h3 className="text-xl mb-4">Atmospheric Settings</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Richly detailed worlds from moonlit gardens to mysterious estates that transport
+                you into the heart of every story.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reader Testimonials Section */}
+      <section className="py-16 bg-secondary/10">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl text-center mb-12">What Readers Are Saying</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-card rounded-xl shadow-md p-8">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-muted-foreground mb-4 italic">
+                "Nicole Clark has a gift for weaving romance and mystery together. I couldn't put
+                Crimson Secrets down! The perfect blend of suspense and heart."
+              </p>
+              <p className="font-medium">— Sarah M.</p>
+            </div>
+            <div className="bg-card rounded-xl shadow-md p-8">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-muted-foreground mb-4 italic">
+                "Beautiful prose and captivating characters. Every book transports me to another
+                world. Nicole Clark is a master storyteller!"
+              </p>
+              <p className="font-medium">— Jennifer K.</p>
+            </div>
+            <div className="bg-card rounded-xl shadow-md p-8">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <p className="text-muted-foreground mb-4 italic">
+                "The perfect escape! Nicole's books are exactly what I look for in romantic mystery.
+                Can't wait for the next release!"
+              </p>
+              <p className="font-medium">— Amanda R.</p>
             </div>
           </div>
         </div>
