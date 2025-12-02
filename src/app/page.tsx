@@ -45,7 +45,7 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section - Modern Design with Background */}
-      <section className="relative min-h-[calc(100vh-4rem)] overflow-hidden flex items-center">
+      <section className="relative min-h-[calc(100vh-4rem)] overflow-hidden flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -58,9 +58,9 @@ export default function HomePage() {
         </div>
 
         <div className="container mx-auto px-6 relative z-10 py-12 md:py-16">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-items-center max-w-7xl mx-auto">
             {/* Left Content */}
-            <div className="text-center space-y-8">
+            <div className="text-center space-y-8 flex flex-col items-center justify-center">
               <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight">
                   Where Love Meets Mystery
