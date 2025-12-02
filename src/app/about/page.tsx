@@ -123,16 +123,16 @@ export default function AboutPage() {
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12">
-            <div className="max-w-4xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center text-on-dark">
               <Sparkles className="w-16 h-16 mx-auto mb-6 text-white" />
-              <h2 className="text-3xl md:text-4xl text-white mb-6">Writing Philosophy</h2>
-              <blockquote className="text-xl text-white/90 italic leading-relaxed mb-6">
+              <h2 className="text-3xl md:text-4xl mb-6">Writing Philosophy</h2>
+              <blockquote className="text-xl italic leading-relaxed mb-6">
                 "Every great love story deserves a touch of mystery, and every compelling mystery
                 needs the warmth of human connection. I write to explore the spaces where these two
                 worlds collide—where danger makes hearts beat faster, where trust must be earned,
                 and where love becomes the ultimate revelation."
               </blockquote>
-              <p className="text-white/80">— Nicole Clark</p>
+              <p className="text-light-muted">— Nicole Clark</p>
             </div>
           </div>
         </div>
@@ -289,10 +289,10 @@ export default function AboutPage() {
       {/* Connect Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12 text-center">
+          <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12 text-center text-on-dark">
             <Mail className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h2 className="text-3xl md:text-4xl text-white mb-4">Let's Stay in Touch</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl mb-4">Let's Stay in Touch</h2>
+            <p className="text-lg mb-8 max-w-2xl mx-auto">
               Join the community of readers who love romantic mysteries. Get exclusive updates,
               behind-the-scenes content, and be the first to know about new releases.
             </p>
@@ -317,38 +317,38 @@ export default function AboutPage() {
       {/* Footer */}
       <footer id="contact" className="bg-primary py-12 mt-16">
         <div className="container mx-auto px-6">
-          <div className="text-center text-white">
+          <div className="text-center text-on-dark">
             <h3 className="text-2xl mb-4">Love and Mystery by Nicole Clark</h3>
-            <p className="text-white/80 mb-6">
+            <p className="mb-6">
               Where romance meets mystery in unforgettable stories
             </p>
             <div className="flex justify-center gap-6 mb-8">
               <a
                 href="mailto:contact@nicoleclark.com"
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-light-muted hover:text-white transition-colors"
               >
                 Email
               </a>
-              <span className="text-white/40">•</span>
+              <span className="text-light-subtle">•</span>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-light-muted hover:text-white transition-colors"
               >
                 Facebook
               </a>
-              <span className="text-white/40">•</span>
+              <span className="text-light-subtle">•</span>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-light-muted hover:text-white transition-colors"
               >
                 Instagram
               </a>
             </div>
-            <p className="text-white/60 text-sm">
+            <p className="text-light-subtle text-sm">
               © 2024 Nicole Clark. All rights reserved.
             </p>
           </div>

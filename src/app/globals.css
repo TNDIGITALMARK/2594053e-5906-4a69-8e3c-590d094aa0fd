@@ -316,3 +316,50 @@ button {
 .sparkle {
   animation: sparkle 2s ease-in-out infinite;
 }
+
+/* ============================================
+   TEXT UTILITY CLASSES FOR DARK BACKGROUNDS
+   ============================================ */
+
+/* Use these classes on sections with dark backgrounds (bg-primary, bg-gradient, etc.) */
+.text-on-dark,
+.text-on-dark h1,
+.text-on-dark h2,
+.text-on-dark h3,
+.text-on-dark h4,
+.text-on-dark h5,
+.text-on-dark h6 {
+  color: white;
+}
+
+.text-on-dark p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.text-on-dark a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.text-on-dark a:hover {
+  color: white;
+}
+
+/* Alternative: use .heading-light for individual headings on dark backgrounds */
+.heading-light {
+  color: white !important;
+}
+
+/* Alternative: use .text-light for body text on dark backgrounds */
+.text-light {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Alternative: use .text-light-muted for secondary text on dark backgrounds */
+.text-light-muted {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Alternative: use .text-light-subtle for tertiary text on dark backgrounds */
+.text-light-subtle {
+  color: rgba(255, 255, 255, 0.6) !important;
+}

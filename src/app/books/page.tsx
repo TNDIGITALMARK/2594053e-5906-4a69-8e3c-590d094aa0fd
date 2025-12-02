@@ -202,11 +202,11 @@ export default function BooksPage() {
       {/* Call to Action */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12 text-center">
-            <h2 className="text-3xl md:text-4xl text-white mb-4">
+          <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12 text-center text-on-dark">
+            <h2 className="text-3xl md:text-4xl mb-4">
               Can't Decide Which Book to Start With?
             </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 max-w-2xl mx-auto">
               Sign up for our newsletter and receive a free reading guide that will help you
               choose your next romantic mystery adventure!
             </p>
@@ -223,38 +223,38 @@ export default function BooksPage() {
       {/* Footer */}
       <footer id="contact" className="bg-primary py-12 mt-16">
         <div className="container mx-auto px-6">
-          <div className="text-center text-white">
+          <div className="text-center text-on-dark">
             <h3 className="text-2xl mb-4">Love and Mystery by Nicole Clark</h3>
-            <p className="text-white/80 mb-6">
+            <p className="mb-6">
               Where romance meets mystery in unforgettable stories
             </p>
             <div className="flex justify-center gap-6 mb-8">
               <a
                 href="mailto:contact@nicoleclark.com"
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-light-muted hover:text-white transition-colors"
               >
                 Email
               </a>
-              <span className="text-white/40">•</span>
+              <span className="text-light-subtle">•</span>
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-light-muted hover:text-white transition-colors"
               >
                 Facebook
               </a>
-              <span className="text-white/40">•</span>
+              <span className="text-light-subtle">•</span>
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/80 hover:text-white transition-colors"
+                className="text-light-muted hover:text-white transition-colors"
               >
                 Instagram
               </a>
             </div>
-            <p className="text-white/60 text-sm">
+            <p className="text-light-subtle text-sm">
               © 2024 Nicole Clark. All rights reserved.
             </p>
           </div>
