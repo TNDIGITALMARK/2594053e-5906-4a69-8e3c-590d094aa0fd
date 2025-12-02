@@ -57,8 +57,8 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 py-12 md:py-16">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-items-center max-w-7xl mx-auto">
+        <div className="container mx-auto px-6 relative z-10 py-12 md:py-16 flex justify-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-items-center max-w-7xl w-full">
             {/* Left Content */}
             <div className="text-center space-y-8 flex flex-col items-center justify-center">
               <div className="space-y-6">
