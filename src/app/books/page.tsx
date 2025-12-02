@@ -114,7 +114,7 @@ export default function BooksPage() {
                 About
               </Link>
               <Link
-                href="#contact"
+                href="/contact"
                 className="text-sm font-medium text-foreground hover:text-secondary transition-colors uppercase tracking-wider"
               >
                 Contact
