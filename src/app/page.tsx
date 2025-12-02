@@ -57,10 +57,10 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 py-12 md:py-16">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-items-center max-w-7xl mx-auto">
+        <div className="w-full flex items-center justify-center relative z-10 py-12 md:py-16 px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center justify-items-center w-full max-w-7xl mx-auto">
             {/* Left Content */}
-            <div className="text-center space-y-8 flex flex-col items-center justify-center">
+            <div className="text-center space-y-8 flex flex-col items-center justify-center w-full max-w-2xl">
               <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight">
                   Where Love Meets Mystery
@@ -108,12 +108,12 @@ export default function HomePage() {
             </div>
 
             {/* Right Content - Featured Book Showcase */}
-            <div className="relative lg:h-[600px] flex items-center justify-center">
+            <div className="relative lg:h-[600px] flex items-center justify-center w-full">
               {/* Background decorative element */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 rounded-3xl blur-3xl"></div>
 
               {/* Book Display */}
-              <div className="relative z-10 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+              <div className="relative z-10 grid grid-cols-3 gap-4 w-full max-w-lg mx-auto">
                 {/* Left book - smaller */}
                 <div className="relative aspect-[2/3] book-cover overflow-hidden transform translate-y-8 opacity-80 hover:opacity-100 transition-all duration-300 w-full">
                   <Image
