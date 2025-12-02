@@ -45,59 +45,64 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section with Featured Books */}
-      <section className="py-12 md:py-20">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
-          {/* Featured Books Showcase */}
-          <div className="mb-16">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
-              <div className="relative aspect-[2/3] book-cover overflow-hidden transform md:translate-y-8">
+          {/* Author Introduction - Moved to top for better hierarchy */}
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+              Welcome to a World of Romance and Mystery
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed">
+              Step into the enchanting worlds created by Nicole Clark, where love and mystery
+              intertwine in captivating tales. With 6-7 published novels, Nicole weaves stories
+              of passion, secrets, and intrigue that will keep you turning pages late into the night.
+            </p>
+          </div>
+
+          {/* Featured Books Showcase - Improved layout */}
+          <div className="mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10 max-w-5xl mx-auto items-end">
+              <div className="relative aspect-[2/3] book-cover overflow-hidden mx-auto w-full max-w-[280px] sm:max-w-none">
                 <Image
                   src="/generated/whispers-garden.png"
                   alt="Whispers in the Garden"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
-              <div className="relative aspect-[2/3] book-cover overflow-hidden transform scale-110 z-10">
+              <div className="relative aspect-[2/3] book-cover overflow-hidden mx-auto w-full max-w-[280px] sm:max-w-none sm:scale-110 sm:-translate-y-6 z-10">
                 <Image
                   src="/generated/crimson-secrets.png"
                   alt="Crimson Secrets"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
-              <div className="relative aspect-[2/3] book-cover overflow-hidden transform md:translate-y-8 col-span-2 md:col-span-1 mx-auto w-1/2 md:w-full">
+              <div className="relative aspect-[2/3] book-cover overflow-hidden mx-auto w-full max-w-[280px] sm:max-w-none">
                 <Image
                   src="/generated/shadows-love.png"
                   alt="Shadows of Love"
                   fill
                   className="object-cover"
+                  priority
                 />
               </div>
             </div>
           </div>
 
-          {/* Author Introduction */}
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl mb-6">
-              Welcome to a World of Romance and Mystery
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Step into the enchanting worlds created by Nicole Clark, where love and mystery
-              intertwine in captivating tales. With 6-7 published novels, Nicole weaves stories
-              of passion, secrets, and intrigue that will keep you turning pages late into the night.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/books" className="btn-gradient inline-block">
-                Explore All Books
-              </Link>
-              <a
-                href="#newsletter"
-                className="inline-block px-8 py-3 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all"
-              >
-                Join Newsletter
-              </a>
-            </div>
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <Link href="/books" className="btn-gradient inline-block text-center">
+              Explore All Books
+            </Link>
+            <a
+              href="#newsletter"
+              className="inline-block px-8 py-3 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all text-center"
+            >
+              Join Newsletter
+            </a>
           </div>
         </div>
       </section>
