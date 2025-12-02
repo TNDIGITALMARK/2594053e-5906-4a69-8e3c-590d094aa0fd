@@ -60,19 +60,19 @@ export default function HomePage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
             {/* Left Content */}
-            <div className="text-center lg:text-left space-y-8">
+            <div className="text-center space-y-8">
               <div className="space-y-6">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight tracking-tight">
                   Where Love Meets Mystery
                 </h1>
-                <p className="text-xl md:text-2xl text-foreground/80 font-light leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                <p className="text-xl md:text-2xl text-foreground/80 font-light leading-relaxed max-w-2xl mx-auto">
                   Discover captivating tales of passion and intrigue by Nicole Clark.
                   Each story weaves romance and suspense into unforgettable journeys.
                 </p>
               </div>
 
               {/* Call to Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/books"
                   className="btn-gradient inline-block text-center px-10 py-4 text-lg"
@@ -88,7 +88,7 @@ export default function HomePage() {
               </div>
 
               {/* Social Proof */}
-              <div className="flex items-center justify-center lg:justify-start gap-6 pt-6">
+              <div className="flex items-center justify-center gap-6 pt-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary">6+</div>
                   <div className="text-sm text-muted-foreground">Published Novels</div>
@@ -179,7 +179,7 @@ export default function HomePage() {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 448px"
               />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 text-center md:text-left">
               <div>
                 <h3 className="text-3xl md:text-4xl mb-4">Crimson Secrets</h3>
                 <p className="text-lg text-foreground/80 leading-relaxed">
@@ -189,7 +189,7 @@ export default function HomePage() {
                   stranger who holds all the answers.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-6 py-4 border-y border-border/50">
+              <div className="flex flex-wrap gap-6 py-4 border-y border-border/50 justify-center md:justify-start">
                 <div>
                   <div className="text-sm font-medium text-muted-foreground mb-1">Genre</div>
                   <div className="text-base font-semibold">Romantic Mystery, Suspense</div>
@@ -200,7 +200,7 @@ export default function HomePage() {
                   <div className="text-base font-semibold">2024</div>
                 </div>
               </div>
-              <div className="flex flex-wrap gap-4 pt-2">
+              <div className="flex flex-wrap gap-4 pt-2 justify-center md:justify-start">
                 <a
                   href="https://amazon.com"
                   target="_blank"
