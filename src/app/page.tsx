@@ -172,9 +172,11 @@ export default function HomePage() {
             <div className="relative aspect-[2/3] book-cover overflow-hidden max-w-md mx-auto hover-lift">
               <Image
                 src="/generated/crimson-secrets-hero.png"
-                alt="Crimson Secrets - Latest Release"
+                alt="Crimson Secrets - Latest Release Book Cover"
                 fill
                 className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 448px"
               />
             </div>
             <div className="space-y-6">
