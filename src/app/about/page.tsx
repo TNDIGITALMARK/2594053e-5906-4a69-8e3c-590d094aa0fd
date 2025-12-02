@@ -49,12 +49,12 @@ export default function AboutPage() {
         <div className="container mx-auto px-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-8"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Home</span>
           </Link>
-          <div className="bg-card rounded-2xl shadow-lg p-8 md:p-16 text-center">
+          <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl mb-6">About Nicole Clark</h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Weaving tales of romance and mystery that captivate the heart and intrigue the mind
@@ -64,7 +64,7 @@ export default function AboutPage() {
       </section>
 
       {/* Author Story */}
-      <section className="py-12">
+      <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="order-2 md:order-1">
@@ -96,7 +96,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <div className="bg-card rounded-2xl shadow-lg p-12 text-center">
+              <div className="glass-card rounded-2xl p-12 text-center">
                 <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                   <span className="text-6xl text-white font-serif italic">NC</span>
                 </div>
@@ -120,10 +120,10 @@ export default function AboutPage() {
       </section>
 
       {/* Writing Philosophy */}
-      <section className="py-12">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-6">
-          <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12">
-            <div className="max-w-4xl mx-auto text-center text-on-dark">
+          <div className="bg-primary/95 backdrop-blur-sm rounded-2xl shadow-lg p-8 md:p-12 max-w-4xl mx-auto">
+            <div className="text-center text-on-dark">
               <Sparkles className="w-16 h-16 mx-auto mb-6 text-white" />
               <h2 className="text-3xl md:text-4xl mb-6">Writing Philosophy</h2>
               <blockquote className="text-xl italic leading-relaxed mb-6">
@@ -139,11 +139,11 @@ export default function AboutPage() {
       </section>
 
       {/* What Readers Love */}
-      <section className="py-12">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl text-center mb-12">What Readers Love</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card rounded-2xl shadow-lg p-8 text-center">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto">
+            <div className="glass-card-subtle rounded-2xl p-8 text-center hover:glass-card transition-all duration-300">
               <Heart className="w-12 h-12 mx-auto mb-4 text-secondary" />
               <h3 className="text-xl font-semibold mb-3">Captivating Romance</h3>
               <p className="text-muted-foreground">
@@ -151,14 +151,14 @@ export default function AboutPage() {
                 challenges and mysteries
               </p>
             </div>
-            <div className="bg-card rounded-2xl shadow-lg p-8 text-center">
+            <div className="glass-card-subtle rounded-2xl p-8 text-center hover:glass-card transition-all duration-300">
               <BookOpen className="w-12 h-12 mx-auto mb-4 text-secondary" />
               <h3 className="text-xl font-semibold mb-3">Gripping Mysteries</h3>
               <p className="text-muted-foreground">
                 Clever plots with unexpected twists that keep you guessing until the very last page
               </p>
             </div>
-            <div className="bg-card rounded-2xl shadow-lg p-8 text-center">
+            <div className="glass-card-subtle rounded-2xl p-8 text-center hover:glass-card transition-all duration-300">
               <Sparkles className="w-12 h-12 mx-auto mb-4 text-secondary" />
               <h3 className="text-xl font-semibold mb-3">Atmospheric Settings</h3>
               <p className="text-muted-foreground">
@@ -171,11 +171,11 @@ export default function AboutPage() {
       </section>
 
       {/* Reader Testimonials */}
-      <section className="py-12">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl md:text-4xl text-center mb-12">What Readers Are Saying</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-card rounded-2xl shadow-lg p-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            <div className="glass-card rounded-2xl p-8">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-secondary text-xl">
@@ -190,7 +190,7 @@ export default function AboutPage() {
               </p>
               <p className="font-semibold">— Sarah M., Book Club Leader</p>
             </div>
-            <div className="bg-card rounded-2xl shadow-lg p-8">
+            <div className="glass-card rounded-2xl p-8">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-secondary text-xl">
@@ -205,7 +205,7 @@ export default function AboutPage() {
               </p>
               <p className="font-semibold">— Michael R., Avid Reader</p>
             </div>
-            <div className="bg-card rounded-2xl shadow-lg p-8">
+            <div className="glass-card rounded-2xl p-8">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-secondary text-xl">
@@ -220,7 +220,7 @@ export default function AboutPage() {
               </p>
               <p className="font-semibold">— Jennifer L., Romance Enthusiast</p>
             </div>
-            <div className="bg-card rounded-2xl shadow-lg p-8">
+            <div className="glass-card rounded-2xl p-8">
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <span key={i} className="text-secondary text-xl">
@@ -240,11 +240,11 @@ export default function AboutPage() {
       </section>
 
       {/* Awards & Recognition */}
-      <section className="py-12">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-6">
-          <div className="bg-card rounded-2xl shadow-lg p-8 md:p-12">
+          <div className="glass-card rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
             <h2 className="text-3xl text-center mb-8">Awards & Recognition</h2>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6">
               <div className="flex gap-4">
                 <Award className="w-8 h-8 text-secondary flex-shrink-0" />
                 <div>
@@ -287,9 +287,9 @@ export default function AboutPage() {
       </section>
 
       {/* Connect Section */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-6">
-          <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12 text-center text-on-dark">
+          <div className="bg-primary/95 backdrop-blur-sm rounded-2xl shadow-lg p-8 md:p-12 text-center text-on-dark max-w-4xl mx-auto">
             <Mail className="w-16 h-16 mx-auto mb-6 text-white" />
             <h2 className="text-3xl md:text-4xl mb-4">Let's Stay in Touch</h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto">

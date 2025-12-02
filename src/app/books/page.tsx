@@ -129,14 +129,14 @@ export default function BooksPage() {
         <div className="container mx-auto px-6">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-primary hover:text-secondary transition-colors mb-8"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Back to Home</span>
           </Link>
-          <div className="bg-card rounded-2xl shadow-lg p-8 md:p-12">
-            <h1 className="text-4xl md:text-5xl text-center mb-4">Book Catalog</h1>
-            <p className="text-lg text-center text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl mb-4">Book Catalog</h1>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Explore Nicole Clark's complete collection of romantic mystery novels. Each story
               offers a unique blend of passion, intrigue, and unforgettable characters.
             </p>
@@ -145,13 +145,13 @@ export default function BooksPage() {
       </section>
 
       {/* Books Grid */}
-      <section className="py-12">
+      <section className="py-8">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {books.map((book) => (
               <div
                 key={book.id}
-                className="bg-card rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                className="glass-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300"
               >
                 <div className="relative aspect-[2/3] book-cover overflow-hidden">
                   <Image
@@ -200,9 +200,9 @@ export default function BooksPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-6">
-          <div className="bg-primary rounded-2xl shadow-lg p-8 md:p-12 text-center text-on-dark">
+          <div className="bg-primary/95 backdrop-blur-sm rounded-2xl shadow-lg p-8 md:p-12 text-center text-on-dark max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl mb-4">
               Can't Decide Which Book to Start With?
             </h2>
