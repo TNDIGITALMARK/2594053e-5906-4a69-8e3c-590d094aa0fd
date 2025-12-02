@@ -115,24 +115,26 @@ export default function HomePage() {
               {/* Book Display */}
               <div className="relative z-10 grid grid-cols-3 gap-4 max-w-lg mx-auto">
                 {/* Left book - smaller */}
-                <div className="relative aspect-[2/3] book-cover overflow-hidden transform translate-y-8 opacity-80 hover:opacity-100 transition-all duration-300">
+                <div className="relative aspect-[2/3] book-cover overflow-hidden transform translate-y-8 opacity-80 hover:opacity-100 transition-all duration-300 w-full">
                   <Image
                     src="/generated/whispers-garden.png"
                     alt="Whispers in the Garden"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
+                    quality={90}
                   />
                 </div>
 
                 {/* Center book - featured (larger) */}
-                <div className="relative aspect-[2/3] book-cover overflow-hidden transform scale-125 z-20 shadow-2xl">
+                <div className="relative aspect-[2/3] book-cover overflow-hidden transform scale-125 z-20 shadow-2xl w-full">
                   <Image
                     src="/generated/crimson-secrets.png"
                     alt="Crimson Secrets - Latest Release"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
+                    quality={95}
                   />
                   {/* Latest badge */}
                   <div className="absolute top-4 -right-2 bg-secondary text-foreground px-4 py-1 rounded-full text-xs font-bold shadow-lg">
@@ -141,13 +143,14 @@ export default function HomePage() {
                 </div>
 
                 {/* Right book - smaller */}
-                <div className="relative aspect-[2/3] book-cover overflow-hidden transform translate-y-8 opacity-80 hover:opacity-100 transition-all duration-300">
+                <div className="relative aspect-[2/3] book-cover overflow-hidden transform translate-y-8 opacity-80 hover:opacity-100 transition-all duration-300 w-full">
                   <Image
                     src="/generated/shadows-love.png"
                     alt="Shadows of Love"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
+                    quality={90}
                   />
                 </div>
               </div>
@@ -169,14 +172,15 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
-            <div className="relative aspect-[2/3] book-cover overflow-hidden max-w-md mx-auto hover-lift">
+            <div className="relative aspect-[2/3] book-cover overflow-hidden max-w-md mx-auto hover-lift w-full">
               <Image
                 src="/generated/crimson-secrets-hero.png"
                 alt="Crimson Secrets - Latest Release Book Cover"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 448px"
+                quality={95}
               />
             </div>
             <div className="space-y-6 text-center md:text-left">
