@@ -50,7 +50,7 @@ const books = [
   {
     id: 5,
     title: "Her Best Friend's Husband",
-    cover: "/generated/bestfriends-husband.png",
+    cover: "/books/her-best-friends-husband.webp",
     description:
       "Kandi goes to Texas to see her best friend Janie and ends up falling in love with her best friend's husband Cole. A story of forbidden desire, complicated emotions, and the consequences of following your heart when you know you shouldn't.",
     genre: "Contemporary Romance",
@@ -157,15 +157,24 @@ export default function BooksPage() {
                     </span>
                   </div>
                   <div className="flex gap-3">
-                    <a
-                      href="https://amazon.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 btn-gradient text-center inline-flex items-center justify-center gap-2 py-2 text-sm"
-                    >
-                      <ShoppingCart className="w-4 h-4" />
-                      <span>Buy Now</span>
-                    </a>
+                    {book.id === 5 ? (
+                      <Link
+                        href="/books/her-best-friends-husband"
+                        className="flex-1 btn-gradient text-center inline-flex items-center justify-center gap-2 py-2 text-sm"
+                      >
+                        <span>View Details</span>
+                      </Link>
+                    ) : (
+                      <a
+                        href="https://amazon.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 btn-gradient text-center inline-flex items-center justify-center gap-2 py-2 text-sm"
+                      >
+                        <ShoppingCart className="w-4 h-4" />
+                        <span>Buy Now</span>
+                      </a>
+                    )}
                     <button className="px-4 py-2 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all text-sm">
                       Preview
                     </button>
