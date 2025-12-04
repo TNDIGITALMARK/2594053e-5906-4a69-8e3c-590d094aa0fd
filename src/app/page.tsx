@@ -90,7 +90,7 @@ export default function HomePage() {
               {/* Social Proof */}
               <div className="flex items-center justify-center gap-6 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary">6+</div>
+                  <div className="text-3xl font-bold text-primary">5</div>
                   <div className="text-sm text-muted-foreground">Published Novels</div>
                 </div>
                 <div className="h-12 w-px bg-border"></div>
@@ -117,8 +117,8 @@ export default function HomePage() {
                 {/* Left book - smaller */}
                 <div className="relative aspect-[2/3] book-cover overflow-hidden transform translate-y-8 opacity-80 hover:opacity-100 transition-all duration-300 w-full">
                   <Image
-                    src="/generated/whispers-garden.png"
-                    alt="Whispers in the Garden"
+                    src="/books/chrome-and-blood.webp"
+                    alt="Chrome and Blood"
                     fill
                     className="object-cover object-center"
                     priority
@@ -129,8 +129,8 @@ export default function HomePage() {
                 {/* Center book - featured (larger) */}
                 <div className="relative aspect-[2/3] book-cover overflow-hidden transform scale-125 z-20 shadow-2xl w-full">
                   <Image
-                    src="/generated/crimson-secrets.png"
-                    alt="Crimson Secrets - Latest Release"
+                    src="/books/crossfire-hearts.webp"
+                    alt="Crossfire Hearts - Latest Release"
                     fill
                     className="object-cover object-center"
                     priority
@@ -145,8 +145,8 @@ export default function HomePage() {
                 {/* Right book - smaller */}
                 <div className="relative aspect-[2/3] book-cover overflow-hidden transform translate-y-8 opacity-80 hover:opacity-100 transition-all duration-300 w-full">
                   <Image
-                    src="/generated/shadows-love.png"
-                    alt="Shadows of Love"
+                    src="/books/whisky-and-wild-hearts.webp"
+                    alt="Whisky and Wild Hearts"
                     fill
                     className="object-cover object-center"
                     priority
@@ -168,14 +168,14 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl mb-4">Latest Release</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Dive into the newest tale of passion and mystery
+              Dive into the newest tale of passion and danger
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center max-w-6xl mx-auto">
             <div className="relative aspect-[2/3] book-cover overflow-hidden max-w-md mx-auto hover-lift w-full">
               <Image
-                src="/generated/crimson-secrets-hero.png"
-                alt="Crimson Secrets - Latest Release Book Cover"
+                src="/books/crossfire-hearts.webp"
+                alt="Crossfire Hearts - Latest Release Book Cover"
                 fill
                 className="object-cover object-center"
                 priority
@@ -185,18 +185,18 @@ export default function HomePage() {
             </div>
             <div className="space-y-6 text-center md:text-left">
               <div>
-                <h3 className="text-3xl md:text-4xl mb-4">Crimson Secrets</h3>
+                <h3 className="text-3xl md:text-4xl mb-4">Crossfire Hearts</h3>
                 <p className="text-lg text-foreground/80 leading-relaxed">
-                  In a moonlit world of passion and danger, two souls discover that the greatest
-                  mysteries lie within the heart. When detective Isabella Monroe investigates a
-                  series of mysterious disappearances, she never expected to fall for the enigmatic
-                  stranger who holds all the answers.
+                  Two rival bike clubs are at war, but when the president's daughter Raven falls for
+                  the rival president's son Jackson, their forbidden love changes everything. In a world
+                  where loyalty means everything and love is forbidden, can two hearts survive when caught
+                  in the crossfire between families?
                 </p>
               </div>
               <div className="flex flex-wrap gap-6 py-4 border-y border-border/50 justify-center md:justify-start">
                 <div>
                   <div className="text-sm font-medium text-muted-foreground mb-1">Genre</div>
-                  <div className="text-base font-semibold">Romantic Mystery, Suspense</div>
+                  <div className="text-base font-semibold">MC Romance</div>
                 </div>
                 <div className="h-auto w-px bg-border"></div>
                 <div>
