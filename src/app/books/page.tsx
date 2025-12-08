@@ -1,66 +1,15 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ShoppingCart } from "lucide-react";
-
-const books = [
-  {
-    id: 1,
-    title: "Lassoed in Love",
-    cover: "/books/lassoed-in-love.webp",
-    description:
-      "Amanda is a woman who spends her days working on her family's ranch. She loves her life but something has been missing for the last couple of years—love. She had been on a few dates but there was never any spark. Amanda wanted something real but, in a town this small, she was beginning to wonder if she would ever find it. But everything changes...",
-    genre: "Contemporary Romance",
-    published: "2024",
-    pages: 328,
-    rating: "4.9/5",
-  },
-  {
-    id: 2,
-    title: "Crossfire Hearts",
-    cover: "/books/crossfire-hearts.webp",
-    description:
-      "Two rival bike clubs are at war, but when the president's daughter Raven falls for the rival president's son Jackson, their forbidden love changes everything. In a world of loyalty and danger, can love survive when families are enemies?",
-    genre: "MC Romance",
-    published: "2024",
-    pages: 356,
-    rating: "4.8/5",
-  },
-  {
-    id: 3,
-    title: "Chrome and Blood",
-    cover: "/books/chrome-and-blood.webp",
-    description:
-      "A biker is murdered in front of his biker club and the cops won't help because to them he is just another outlaw biker. So his best friend Gunner opens his own investigation into the murder, and what he finds turns the club upside down. A gripping thriller about loyalty, justice, and the bonds of brotherhood.",
-    genre: "MC Thriller Mystery",
-    published: "2024",
-    pages: 389,
-    rating: "4.9/5",
-  },
-  {
-    id: 4,
-    title: "Whisky and Wild Hearts",
-    cover: "/books/whisky-and-wild-hearts.webp",
-    description:
-      "The story of a bartender named Roxy who falls in love with a biker named Brantley. In a world where passion meets danger, Roxy discovers that sometimes the wildest hearts beat the truest. A tale of love, loyalty, and finding home in the most unexpected places.",
-    genre: "MC Romance",
-    published: "2024",
-    pages: 342,
-    rating: "4.8/5",
-  },
-  {
-    id: 5,
-    title: "Her Best Friend's Husband",
-    cover: "/books/her-best-friends-husband.webp",
-    description:
-      "Kandi goes to Texas to see her best friend Janie and ends up falling in love with her best friend's husband Cole. A story of forbidden desire, complicated emotions, and the consequences of following your heart when you know you shouldn't.",
-    genre: "Contemporary Romance",
-    published: "2024",
-    pages: 312,
-    rating: "4.7/5",
-  },
-];
+import { books } from "@/data/books";
+import { useCart } from "@/contexts/cart-context";
+import { CartDrawer } from "@/components/cart-drawer";
+import { CartButton } from "@/components/cart-button";
 
 export default function BooksPage() {
+  const { addToCart } = useCart();
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -156,28 +105,30 @@ export default function BooksPage() {
                       {book.genre}
                     </span>
                   </div>
+
+                  {/* Price */}
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-primary">
+                      ${book.price.toFixed(2)}
+                    </span>
+                  </div>
+
                   <div className="flex gap-3">
-                    {book.id === 5 ? (
+                    <button
+                      onClick={() => addToCart(book)}
+                      className="flex-1 btn-gradient text-center inline-flex items-center justify-center gap-2 py-3 text-sm font-semibold"
+                    >
+                      <ShoppingCart className="w-4 h-4" />
+                      <span>Add to Cart</span>
+                    </button>
+                    {book.id === 5 && (
                       <Link
                         href="/books/her-best-friends-husband"
-                        className="flex-1 btn-gradient text-center inline-flex items-center justify-center gap-2 py-2 text-sm"
+                        className="px-4 py-3 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all text-sm"
                       >
-                        <span>View Details</span>
+                        Details
                       </Link>
-                    ) : (
-                      <a
-                        href="https://amazon.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 btn-gradient text-center inline-flex items-center justify-center gap-2 py-2 text-sm"
-                      >
-                        <ShoppingCart className="w-4 h-4" />
-                        <span>Buy Now</span>
-                      </a>
                     )}
-                    <button className="px-4 py-2 rounded-full border-2 border-primary text-primary font-medium hover:bg-primary hover:text-white transition-all text-sm">
-                      Preview
-                    </button>
                   </div>
                 </div>
               </div>
@@ -247,6 +198,12 @@ export default function BooksPage() {
           </div>
         </div>
       </footer>
+
+      {/* Cart Drawer */}
+      <CartDrawer />
+
+      {/* Floating Cart Button */}
+      <CartButton />
     </div>
   );
 }
